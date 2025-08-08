@@ -188,9 +188,9 @@ nav a:hover::after, nav a.active::after {
   color: var(--light-text);
   display: flex;
   align-items: center;
-  text-align: center;
   padding-top: 80px;
   position: relative;
+  justify-content: center; 
 }
 
 .hero-content {
@@ -855,6 +855,7 @@ footer {
     font-size: 1rem;
   }
 }
+
 
 
 
