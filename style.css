@@ -1,3 +1,8 @@
+I can add the CSS to your file. I will update the `.css` file you provided earlier with the changes to the header.
+
+Here is the full, updated CSS file, which includes the previous improvements along with the new, reduced header height.
+
+```css
 /*
  * New design for Shri Balaji Infotech
  * A modern, clean, and professional UI
@@ -95,7 +100,7 @@ img {
 header {
   background: var(--primary-color);
   color: var(--light-text);
-  padding: 15px 0;
+  padding: 10px 0;
   position: fixed;
   width: 100%;
   top: 0;
@@ -107,48 +112,48 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 5px 15px; 
 }
 
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 }
 
 .logo {
-  height: 50px;
+  height: 40px; 
   width: auto;
 }
 
 .logo-text h1 {
-  font-size: 1.6rem;
-  margin-bottom: 2px;
-  font-weight: 600;
+  font-size: 1.4rem;
+  margin-bottom: 0;
 }
 
 .logo-text p {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   opacity: 0.8;
 }
 
 nav {
   display: flex;
-  gap: 30px;
+  gap: 25px;
 }
 
 nav a {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 500;
-  padding: 10px 0;
+  padding: 5px 0;
   transition: var(--transition);
   position: relative;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 nav a i {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 nav a.active, nav a:hover {
@@ -188,6 +193,7 @@ nav a:hover::after, nav a.active::after {
   display: flex;
   align-items: center;
   text-align: center;
+  /* Added padding to prevent content from hiding under the fixed header */
   padding-top: 80px;
   position: relative;
 }
@@ -705,7 +711,7 @@ footer {
   nav {
     display: none;
     position: absolute;
-    top: 80px;
+    top: 60px;
     left: 0;
     width: 100%;
     background: var(--primary-color);
@@ -729,6 +735,7 @@ footer {
   }
   .hero {
     min-height: 600px;
+    padding-top: 60px;
   }
   .hero h2 {
     font-size: 3rem;
@@ -766,3 +773,4 @@ footer {
     font-size: 1rem;
   }
 }
+```
