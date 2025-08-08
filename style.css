@@ -119,18 +119,15 @@ header .container {
 .logo {
   height: 40px; 
   width: auto;
-  text-align: center; 
 }
 
 .logo-text h1 {
-    font-size: 1.6rem; /* Adjust the size as needed */
-    margin-bottom: 0;
-    font-weight: 600;
-    line-height: 1.2;
+  font-size: 1.6rem;
+  margin-bottom: 0;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
 }
-
-/* You can remove the .logo-text p rule entirely as it's no longer used. */
-
 
 nav {
   display: flex;
@@ -187,16 +184,17 @@ nav a:hover::after, nav a.active::after {
   background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('images/banner.jpg') no-repeat center center/cover;
   color: var(--light-text);
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding-top: 80px;
   position: relative;
-  justify-content: center; 
 }
 
 .hero-content {
   max-width: 900px;
   margin: auto;
-  text-align: center; 
+  text-align: center;
 }
 
 .hero h2 {
@@ -487,76 +485,47 @@ nav a:hover::after, nav a.active::after {
 }
 
 /* ==================================== */
-/* 7. Testimonials Section    */
+/* 7. Placements Section      */
 /* ==================================== */
 
-.testimonials-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+.placement-table-container {
+    overflow-x: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
 }
 
-.testimonial-card {
-  background: var(--card-bg);
-  padding: 30px;
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  transition: var(--transition);
-  position: relative;
-  text-align: center;
+.placement-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
 }
 
-.testimonial-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+.placement-table thead tr {
+    background: var(--primary-color);
+    color: var(--light-text);
+    text-align: left;
 }
 
-.testimonial-text {
-  font-size: 1.1rem;
-  font-style: italic;
-  color: #555;
-  margin-bottom: 25px;
-  position: relative;
+.placement-table th, .placement-table td {
+    padding: 15px;
+    vertical-align: top;
+    border: 1px solid #e0e0e0;
 }
 
-.testimonial-text::before {
-  content: '"';
-  font-size: 3rem;
-  color: var(--accent-color);
-  position: absolute;
-  top: -10px;
-  left: 0;
-  opacity: 0.2;
+.placement-table tbody tr:nth-child(even) {
+    background: #f8f8f8;
 }
 
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
+.placement-table img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
-.author-img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--accent-color);
-}
-
-.author-info {
-  text-align: left;
-}
-
-.author-name {
-  font-size: 1.2rem;
-  color: var(--primary-color);
-  margin-bottom: 2px;
-}
-
-.author-course {
-  font-size: 0.9rem;
-  color: #777;
+.placement-table td strong {
+    color: var(--primary-color);
 }
 
 /* ==================================== */
@@ -615,7 +584,7 @@ nav a:hover::after, nav a.active::after {
   transform: translateY(-5px) scale(1.1);
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input, .contact-form select, .contact-form textarea {
   width: 100%;
   padding: 15px;
   margin-bottom: 20px;
@@ -625,7 +594,7 @@ nav a:hover::after, nav a.active::after {
   transition: var(--transition);
 }
 
-.contact-form input:focus, .contact-form textarea:focus {
+.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus {
   outline: none;
   border-color: var(--accent-color);
   box-shadow: 0 0 5px rgba(230, 126, 34, 0.3);
@@ -838,6 +807,58 @@ footer {
   .features-list {
     grid-template-columns: 1fr;
   }
+
+  .placement-table-container {
+    padding: 0;
+    box-shadow: none;
+    border: none;
+  }
+
+  .placement-table {
+    display: block;
+    width: 100%;
+    border: none;
+  }
+  
+  .placement-table thead {
+    display: none;
+  }
+  
+  .placement-table tbody, .placement-table tr, .placement-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .placement-table tr {
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+  }
+  
+  .placement-table td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+    border: none;
+    font-size: 1rem;
+  }
+  
+  .placement-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    width: calc(50% - 30px);
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align: left;
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+
+  .placement-table img {
+    display: none;
+  }
 }
 
 @media (max-width: 500px) {
@@ -855,8 +876,3 @@ footer {
     font-size: 1rem;
   }
 }
-
-
-
-
-
