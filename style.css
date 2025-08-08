@@ -188,7 +188,6 @@ nav a:hover::after, nav a.active::after {
   display: flex;
   align-items: center;
   text-align: center;
-  /* Added padding to prevent content from hiding under the fixed header */
   padding-top: 80px;
   position: relative;
 }
