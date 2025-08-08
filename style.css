@@ -485,7 +485,80 @@ nav a:hover::after, nav a.active::after {
 }
 
 /* ==================================== */
-/* 7. Contact Section         */
+/* 7. Testimonials Section    */
+/* ==================================== */
+
+.testimonials-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.testimonial-card {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  position: relative;
+  text-align: center;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-text {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.testimonial-text::before {
+  content: '"';
+  font-size: 3rem;
+  color: var(--accent-color);
+  position: absolute;
+  top: -10px;
+  left: 0;
+  opacity: 0.2;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.author-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent-color);
+}
+
+.author-info {
+  text-align: left;
+}
+
+.author-name {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 2px;
+}
+
+.author-course {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* ==================================== */
+/* 8. Contact Section         */
 /* ==================================== */
 
 .contact-container {
@@ -581,7 +654,7 @@ nav a:hover::after, nav a.active::after {
 }
 
 /* ==================================== */
-/* 8. Footer                */
+/* 9. Footer                */
 /* ==================================== */
 
 footer {
@@ -681,7 +754,7 @@ footer {
 }
 
 /* ==================================== */
-/* 9. Responsiveness          */
+/* 10. Responsiveness          */
 /* ==================================== */
 
 @media (max-width: 992px) {
