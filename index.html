@@ -128,6 +128,35 @@
         </div>
     </section>
 
+    <section id="course-finder" class="section">
+        <div class="container">
+            <h2>Find Your Perfect Course</h2>
+            <div class="course-finder-container">
+                <p>Answer a few quick questions and our AI-powered tool will suggest the best course for you.</p>
+                <div class="finder-question">
+                    <h4>1. What is your primary career goal?</h4>
+                    <select id="career-goal">
+                        <option value="career-default">Select an option</option>
+                        <option value="web-dev">Become a software developer</option>
+                        <option value="data-sci">Work with data and AI</option>
+                        <option value="office-pro">Improve office skills</option>
+                    </select>
+                </div>
+                <div class="finder-question">
+                    <h4>2. What is your current technical skill level?</h4>
+                    <select id="skill-level">
+                        <option value="skill-default">Select an option</option>
+                        <option value="beginner">Beginner (No prior experience)</option>
+                        <option value="intermediate">Intermediate</option>
+                    </select>
+                </div>
+                <button class="cta-button" id="get-recommendation">Get Recommendation</button>
+                <div id="recommendation-result" class="result-box">
+                    </div>
+            </div>
+        </div>
+    </section>
+
     <section id="placements" class="section">
         <div class="container">
             <h2>Our Placed Students</h2>
@@ -189,12 +218,12 @@
                             </td>
                             <td>
                                 <strong>Company</strong>: IBM<br>
-                                <strong>Salary</strong>: Current salary package is 5 Lac/Annam..
+                                <strong>Salary</strong>: Current salary package is 5 Lac/Annam..<br>
                                 <strong>Placement Date</strong>: 01-Jan-1970
                             </td>
                             <td>Programmer</td>
                             <td>
-                                <img src="images/Sachin.JPG" alt="Sachin Yadav">
+                                <img src="images/sachin.jpg" alt="Sachin Yadav">
                             </td>
                             <td>Current salary package is 5 Lac/Annam..</td>
                         </tr>
@@ -263,7 +292,25 @@
         </div>
     </footer>
 
+    <div class="chatbot-icon" id="chatbot-icon">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+    
+    <div class="chatbot-popup" id="chatbot-popup">
+        <div class="chatbot-header">
+            <h3>Shri Balaji AI Assistant</h3>
+            <span class="close-chatbot">&times;</span>
+        </div>
+        <div class="chatbot-body">
+            <div class="chatbot-message">Hi there! How can I help you today?</div>
+        </div>
+        <div class="chatbot-footer">
+            <input type="text" id="chatbot-input" placeholder="Type your message...">
+            <button id="chatbot-send">Send</button>
+        </div>
+    </div>
+
+
     <script src="script.js"></script>
 </body>
 </html>
-
