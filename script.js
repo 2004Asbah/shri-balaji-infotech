@@ -71,23 +71,15 @@ window.addEventListener('scroll', () => {
 });
 
 // Form submission handling
-const forms = document.querySelectorAll('form');
-forms.forEach(form => {
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        // Here you would typically send the form data to a server
-        alert('Thank you for your submission! We will contact you soon.');
-        form.reset();
-        
-        // Close popup if it's the enrollment form
-        if (form.classList.contains('popup-form')) {
-            popupModal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-    });
+const contactForm = document.querySelector('.contact-form form');
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Thank you for your message! We will contact you soon.');
+    contactForm.reset();
 });
 
-// Personalized Course Finder Logic
+
+// Course Finder Logic
 const getRecommendationBtn = document.getElementById('get-recommendation');
 const careerGoalSelect = document.getElementById('career-goal');
 const skillLevelSelect = document.getElementById('skill-level');
@@ -97,6 +89,11 @@ getRecommendationBtn.addEventListener('click', () => {
     const careerGoal = careerGoalSelect.value;
     const skillLevel = skillLevelSelect.value;
 
+    if (careerGoal === 'career-default' || skillLevel === 'skill-default') {
+        alert('Please select an option for both questions to get a recommendation.');
+        return;
+    }
+
     let recommendation = '';
 
     if (careerGoal === 'web-dev' && skillLevel === 'beginner') {
@@ -105,67 +102,19 @@ getRecommendationBtn.addEventListener('click', () => {
         recommendation = '<h3>Recommended Course: Python Programming</h3><p>The Python Programming course will equip you with the essential skills for a career in Data Science and Machine Learning.</p>';
     } else if (careerGoal === 'office-pro' && skillLevel === 'beginner') {
         recommendation = '<h3>Recommended Course: MS Office & Basics</h3><p>Our MS Office & Basics course is ideal for improving your fundamental computer and office productivity skills.</p>';
+    } else if (careerGoal === 'database' && (skillLevel === 'beginner' || skillLevel === 'intermediate')) {
+        recommendation = '<h3>Recommended Course: Database Management</h3><p>Learn to design and manage databases with our Database Management course, perfect for those interested in data and backend development.</p>';
     } else {
         recommendation = '<h3>No specific recommendation found.</h3><p>Please contact us for a personalized consultation!</p>';
     }
 
     recommendationResult.innerHTML = recommendation;
     recommendationResult.style.display = 'block';
+    alert('Here is your personalized course recommendation!');
 });
 
 
-// AI Chatbot Logic
-const chatbotIcon = document.getElementById('chatbot-icon');
-const chatbotPopup = document.getElementById('chatbot-popup');
-const closeChatbotBtn = document.querySelector('.close-chatbot');
-const chatbotInput = document.getElementById('chatbot-input');
-const chatbotSendBtn = document.getElementById('chatbot-send');
-const chatbotBody = document.querySelector('.chatbot-body');
-
-chatbotIcon.addEventListener('click', () => {
-    chatbotPopup.style.display = 'flex';
-});
-
-closeChatbotBtn.addEventListener('click', () => {
-    chatbotPopup.style.display = 'none';
-});
-
-// A very basic chatbot response simulation
-const getChatbotResponse = (message) => {
-    const msg = message.toLowerCase();
-    if (msg.includes('hello') || msg.includes('hi')) {
-        return 'Hello! How can I help you today?';
-    } else if (msg.includes('courses')) {
-        return 'We offer courses in Web Development, Python Programming, and MS Office & Basics. You can check our "Courses" section for details!';
-    } else if (msg.includes('fee') || msg.includes('price')) {
-        return 'Course fees vary. Please check our "Courses" section or fill out the inquiry form for specific details.';
-    } else if (msg.includes('contact')) {
-        return 'You can contact us via email at info@shribalajiinfotech.com or call us at +91-9876543210.';
-    } else if (msg.includes('thank you')) {
-        return 'You\'re welcome! Let me know if you need anything else.';
-    } else {
-        return 'I am sorry, I can only answer basic questions right now. Please fill out the contact form for a detailed response.';
-    }
+// Initial welcome alert
+window.onload = function() {
+    alert('Welcome to Shri Balaji Infotech! We are here to help you start your IT career.');
 };
-
-chatbotSendBtn.addEventListener('click', () => {
-    const userMessage = chatbotInput.value.trim();
-    if (userMessage !== '') {
-        // Display user message
-        const userMsgDiv = document.createElement('div');
-        userMsgDiv.className = 'chatbot-message user-message';
-        userMsgDiv.textContent = userMessage;
-        chatbotBody.appendChild(userMsgDiv);
-        chatbotInput.value = '';
-
-        // Simulate chatbot response
-        setTimeout(() => {
-            const chatbotResponse = getChatbotResponse(userMessage);
-            const chatbotMsgDiv = document.createElement('div');
-            chatbotMsgDiv.className = 'chatbot-message';
-            chatbotMsgDiv.textContent = chatbotResponse;
-            chatbotBody.appendChild(chatbotMsgDiv);
-            chatbotBody.scrollTop = chatbotBody.scrollHeight; // Auto scroll
-        }, 1000);
-    }
-});
