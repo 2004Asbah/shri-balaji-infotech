@@ -20,7 +20,8 @@
                 <a href="#home" class="active"><i class="fas fa-home"></i> Home</a>
                 <a href="#about"><i class="fas fa-info-circle"></i> About</a>
                 <a href="#courses"><i class="fas fa-laptop-code"></i> Courses</a>
-                <a href="#placements"><i class="fas fa-user-graduate"></i> Placements</a>
+                <a href="#finder"><i class="fas fa-search-dollar"></i> Course Finder</a>
+                <a href="#projects"><i class="fas fa-folder-open"></i> Projects</a>
                 <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
             </nav>
             <div class="mobile-menu">
@@ -124,15 +125,29 @@
                       <button class="course-btn">View Details</button>
                     </div>
                 </div>
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="course-card-content">
+                      <h3>Database Management</h3>
+                      <p>Learn to build and manage robust databases using MariaDB and SQL.</p>
+                      <div class="course-details">
+                          <p><i class="fas fa-clock"></i> 2 Months</p>
+                          <p><i class="fas fa-rupee-sign"></i> 8,500</p>
+                      </div>
+                      <button class="course-btn">View Details</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
-    <section id="course-finder" class="section">
+    
+    <section id="finder" class="section">
         <div class="container">
             <h2>Find Your Perfect Course</h2>
             <div class="course-finder-container">
-                <p>Answer a few quick questions and our AI-powered tool will suggest the best course for you.</p>
+                <p>Answer a few quick questions to get a personalized course recommendation.</p>
                 <div class="finder-question">
                     <h4>1. What is your primary career goal?</h4>
                     <select id="career-goal">
@@ -140,6 +155,7 @@
                         <option value="web-dev">Become a software developer</option>
                         <option value="data-sci">Work with data and AI</option>
                         <option value="office-pro">Improve office skills</option>
+                        <option value="database">Database Management</option>
                     </select>
                 </div>
                 <div class="finder-question">
@@ -157,78 +173,34 @@
         </div>
     </section>
 
-    <section id="placements" class="section">
+    <section id="projects" class="section">
         <div class="container">
-            <h2>Our Placed Students</h2>
-            <div class="placement-table-container">
-                <table class="placement-table">
-                    <thead>
-                        <tr>
-                            <th>S.No.</th>
-                            <th>Student Details</th>
-                            <th>Company Details</th>
-                            <th>Designation</th>
-                            <th>Photograph</th>
-                            <th>Course</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>
-                                <strong>S.No.</strong>: SBIT2023/4356<br>
-                                <strong>Name</strong>: Priyanshi Singh<br>
-                                <strong>College</strong>: BBDITM Lucknow
-                            </td>
-                            <td>
-                                <strong>Company</strong>: Shiksha Forum, Noida (U.P)<br>
-                                <strong>Salary</strong>: 4.5 Lac per annum<br>
-                                <strong>Placement Date</strong>: 10-Nov-2023
-                            </td>
-                            <td>Technical Support</td>
-                            <td>
-                                <img src="images/priyanshi.jpg" alt="Priyanshi Singh">
-                            </td>
-                            <td>ADCA with Tally</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>
-                                <strong>S.No.</strong>: SBIT2023/6322<br>
-                                <strong>Name</strong>: Surbhi Singh<br>
-                                <strong>College</strong>: SRCEM Lucknow
-                            </td>
-                            <td>
-                                <strong>Company</strong>: Sony Ericson Pvt. Ltd.<br>
-                                <strong>Salary</strong>: 6.5 Lac per annum<br>
-                                <strong>Placement Date</strong>: 12-Mar-2024
-                            </td>
-                            <td>Project Manager</td>
-                            <td>
-                                <img src="images/surbhi.jpg" alt="Surbhi Singh">
-                            </td>
-                            <td>JAVA Full Stack Development</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>
-                                <strong>S.No.</strong>: SBIT2017/1006<br>
-                                <strong>Name</strong>: Sachin Yadav<br>
-                                <strong>College</strong>: 
-                            </td>
-                            <td>
-                                <strong>Company</strong>: IBM<br>
-                                <strong>Salary</strong>: Current salary package is 5 Lac/Annam..<br>
-                                <strong>Placement Date</strong>: 01-Jan-1970
-                            </td>
-                            <td>Programmer</td>
-                            <td>
-                                <img src="images/sachin.jpg" alt="Sachin Yadav">
-                            </td>
-                            <td>Current salary package is 5 Lac/Annam..</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <h2>Student Projects Showcase</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="images/project1.jpg" alt="Web Development Project" class="project-img">
+                    <div class="project-content">
+                        <h3>E-commerce Website</h3>
+                        <p class="project-description">A fully functional e-commerce site built using the MERN stack, featuring user authentication and a payment gateway.</p>
+                        <p class="project-student">By: Riya Sharma</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images/project2.jpg" alt="Python Data Analysis Project" class="project-img">
+                    <div class="project-content">
+                        <h3>Stock Price Predictor</h3>
+                        <p class="project-description">A Python-based tool that uses machine learning to analyze historical data and predict future stock prices.</p>
+                        <p class="project-student">By: Aman Verma</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images/project3.jpg" alt="Digital Marketing Dashboard" class="project-img">
+                    <div class="project-content">
+                        <h3>Marketing Analytics Dashboard</h3>
+                        <p class="project-description">An interactive dashboard created in MS Excel to visualize and analyze digital marketing campaign data.</p>
+                        <p class="project-student">By: Sachin Kumar</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -291,26 +263,7 @@
             </div>
         </div>
     </footer>
-
-    <div class="chatbot-icon" id="chatbot-icon">
-        <i class="fas fa-comment-dots"></i>
-    </div>
     
-    <div class="chatbot-popup" id="chatbot-popup">
-        <div class="chatbot-header">
-            <h3>Shri Balaji AI Assistant</h3>
-            <span class="close-chatbot">&times;</span>
-        </div>
-        <div class="chatbot-body">
-            <div class="chatbot-message">Hi there! How can I help you today?</div>
-        </div>
-        <div class="chatbot-footer">
-            <input type="text" id="chatbot-input" placeholder="Type your message...">
-            <button id="chatbot-send">Send</button>
-        </div>
-    </div>
-
-
     <script src="script.js"></script>
 </body>
 </html>
