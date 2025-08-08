@@ -3,67 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shri Balaji Infotech</title>
+    <title>Shri Balaji Infotech - IT Training Specialists</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
-<header>
-    <div class="container">
-        <h1>Shri Balaji Infotech</h1>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#courses">Courses</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </div>
-</header>
-
-<section id="home" class="hero">
-    <h2>Your Gateway to IT Excellence</h2>
-    <p>Industry-focused training to shape your career in technology.</p>
-</section>
-
-<section id="about" class="section">
-    <h2>About Us</h2>
-    <p>Shri Balaji Infotech is committed to providing high-quality IT training programs designed to equip students with the skills demanded in today’s digital world.</p>
-</section>
-
-<section id="courses" class="section">
-    <h2>Our Courses</h2>
-    <div class="course-list">
-        <div class="course-card">
-            <h3>Web Development</h3>
-            <p>Learn HTML, CSS, JavaScript, and backend basics.</p>
-            <p><strong>Duration:</strong> 3 Months</p>
-            <p><strong>Fee:</strong> ₹10,000</p>
+    <!-- Header with Logo and Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="images/logo.png" alt="Shri Balaji Infotech Logo" class="logo">
+                <div class="logo-text">
+                    <h1>Shri Balaji</h1>
+                    <p>Infotech</p>
+                </div>
+            </div>
+            <nav>
+                <a href="#home" class="active"><i class="fas fa-home"></i> Home</a>
+                <a href="#about"><i class="fas fa-info-circle"></i> About</a>
+                <a href="#courses"><i class="fas fa-laptop-code"></i> Courses</a>
+                <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
-        <div class="course-card">
-            <h3>Python Programming</h3>
-            <p>Master Python for data, web, and automation.</p>
-            <p><strong>Duration:</strong> 2 Months</p>
-            <p><strong>Fee:</strong> ₹8,000</p>
+    </header>
+
+    <!-- Hero Banner with Popup -->
+    <section id="home" class="hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h2>IT Training & Specialization</h2>
+                <p>From Web Development to Cybersecurity, we provide hands-on learning to kickstart your career.</p>
+                <button class="cta-button" id="enroll-now">Enroll Now</button>
+            </div>
         </div>
-        <div class="course-card">
-            <h3>MS Office & Basics</h3>
-            <p>Beginner-friendly course to get you job-ready.</p>
-            <p><strong>Duration:</strong> 1 Month</p>
-            <p><strong>Fee:</strong> ₹5,000</p>
+        <!-- Popup Modal -->
+        <div class="popup-modal" id="popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h3>Limited Time Offer!</h3>
+                <p>Get 15% off on all courses when you enroll this week.</p>
+                <form class="popup-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="tel" placeholder="Phone Number" required>
+                    <select required>
+                        <option value="">Select Course</option>
+                        <option>Web Development</option>
+                        <option>Python Programming</option>
+                        <option>MS Office & Basics</option>
+                    </select>
+                    <button type="submit">Apply Now</button>
+                </form>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="contact" class="section">
-    <h2>Contact Us</h2>
-    <p>Email: info@shribalajiinfotech.com</p>
-    <p>Phone: +91-9876543210</p>
-    <p>Address: Shri Balaji Infotech, Your City, India</p>
-</section>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Shri Balaji Infotech is committed to providing high-quality IT training programs designed to equip students with skills in demand in today's digital world.</p>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check-circle"></i> Industry-experienced trainers</li>
+                        <li><i class="fas fa-check-circle"></i> Hands-on practical sessions</li>
+                        <li><i class="fas fa-check-circle"></i> Placement assistance</li>
+                        <li><i class="fas fa-check-circle"></i> Affordable course fees</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="images/about.jpg" alt="Our Training Center">
+                </div>
+            </div>
+        </div>
+    </section>
 
-<footer>
-    <p>&copy; 2025 Shri Balaji Infotech. All Rights Reserved.</p>
-</footer>
+    <!-- Courses Section -->
+    <section id="courses" class="section">
+        <div class="container">
+            <h2>Our Specializations</h2>
+            <div class="course-list">
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Full stack development with MERN stack</p>
+                    <div class="course-details">
+                        <p><i class="fas fa-clock"></i> 3 Months</p>
+                        <p><i class="fas fa-rupee-sign"></i> 10,000</p>
+                    </div>
+                    <button class="course-btn">View Details</button>
+                </div>
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Python Programming</h3>
+                    <p>Data Science and Machine Learning</p>
+                    <div class="course-details">
+                        <p><i class="fas fa-clock"></i> 2 Months</p>
+                        <p><i class="fas fa-rupee-sign"></i> 8,000</p>
+                    </div>
+                    <button class="course-btn">View Details</button>
+                </div>
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>MS Office & Basics</h3>
+                    <p>Beginner-friendly computer course</p>
+                    <div class="course-details">
+                        <p><i class="fas fa-clock"></i> 1 Month</p>
+                        <p><i class="fas fa-rupee-sign"></i> 5,000</p>
+                    </div>
+                    <button class="course-btn">View Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Shri Balaji Infotech, Your City, India</p>
+                    <p><i class="fas fa-phone"></i> +91-9876543210</p>
+                    <p><i class="fas fa-envelope"></i> info@shribalajiinfotech.com</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="tel" placeholder="Phone Number">
+                        <textarea placeholder="Your Message" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo-white.png" alt="Shri Balaji Infotech Logo">
+                    <p>Your gateway to IT excellence</p>
+                </div>
+                <div class="quick-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="newsletter">
+                    <h4>Subscribe</h4>
+                    <form>
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Shri Balaji Infotech. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
