@@ -1,8 +1,7 @@
-/* ====== Updated Variables & Base Styles ====== */
+/* ====== Variables & Base Styles ====== */
 :root {
   --primary-color: #003366;
   --secondary-color: #0056b3;
-  --accent-color: #4da6ff;
   --text-color: #333;
   --light-bg: #f8f8f8;
   --white: #ffffff;
@@ -26,7 +25,7 @@ body {
 
 /* ====== Header Styles ====== */
 header {
-  background: var(--white);
+  background: var(--primary-color);
   padding: 1rem 0;
   position: sticky;
   top: 0;
@@ -58,7 +57,7 @@ nav {
 }
 
 nav a {
-  color: var(--primary-color);
+  color: var(--white);
   text-decoration: none;
   font-weight: 600;
   padding: 0.5rem;
@@ -67,7 +66,7 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--secondary-color);
+  color: #4da6ff;
 }
 
 nav a::after {
@@ -77,7 +76,7 @@ nav a::after {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: var(--secondary-color);
+  background-color: var(--white);
   transition: var(--transition);
 }
 
@@ -85,7 +84,7 @@ nav a:hover::after {
   width: 100%;
 }
 
-/* ====== Hero Section - Updated for SPANCIESE MEET ====== */
+/* ====== Hero Section ====== */
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
               url('images/banner.jpg') no-repeat center/cover;
@@ -101,28 +100,16 @@ nav a:hover::after {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: var(--border-radius);
 }
 
 .hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
-.hero h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  font-weight: 400;
-  color: var(--accent-color);
-}
-
-.hero p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-}
-
-/* ====== Section Styles - Updated Divider ====== */
+/* ====== Section Styles ====== */
 .section {
   padding: 4rem 1rem;
   text-align: center;
@@ -132,23 +119,18 @@ nav a:hover::after {
   font-size: 2rem;
   margin-bottom: 2rem;
   color: var(--primary-color);
+  position: relative;
+  display: inline-block;
 }
 
-.divider {
-  border: none;
-  height: 1px;
-  background-color: #ddd;
-  margin: 2rem auto;
-  width: 80%;
-  max-width: 200px;
-}
-
-/* ====== About Section - Specific Styles ====== */
-#about p {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 1.1rem;
-  line-height: 1.8;
+.section h2::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  background: var(--secondary-color);
+  bottom: -10px;
+  left: 25%;
 }
 
 /* ====== Course Cards ====== */
@@ -168,20 +150,14 @@ nav a:hover::after {
   box-shadow: var(--shadow);
   transition: var(--transition);
   text-align: center;
-  border-top: 3px solid var(--secondary-color);
 }
 
 .course-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  border-top-color: var(--accent-color);
 }
 
 /* ====== Contact Section ====== */
-.contact {
-  background: var(--white);
-}
-
 .contact a {
   color: var(--primary-color);
   text-decoration: none;
@@ -222,10 +198,6 @@ footer {
     font-size: 2rem;
   }
 
-  .hero h2 {
-    font-size: 1.4rem;
-  }
-
   .course-list {
     grid-template-columns: 1fr;
   }
@@ -234,10 +206,6 @@ footer {
 @media (max-width: 480px) {
   .hero-content {
     padding: 1rem;
-  }
-  
-  .hero h1 {
-    font-size: 1.8rem;
   }
   
   .section {
