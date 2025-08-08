@@ -96,6 +96,8 @@ img {
 /* ==================================== */
 /* 2. Header              */
 /* ==================================== */
+/* 2. Header              */
+/* ==================================== */
 
 header {
   background: var(--primary-color);
@@ -155,6 +157,7 @@ nav a {
 nav a i {
   font-size: 1rem;
 }
+/* ... (rest of the CSS for the header remains the same) ... */
 /* ... (rest of the CSS for the header remains the same) ... */
 
 nav a.active, nav a:hover {
@@ -775,4 +778,5 @@ footer {
   }
 }
 ```
+
 
