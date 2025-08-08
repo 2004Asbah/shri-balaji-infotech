@@ -344,7 +344,7 @@ nav a:hover::after, nav a.active::after {
 
 .about-content {
   display: flex;
-  gap: 50px;
+  gap: 30px;
   align-items: center;
 }
 
@@ -359,22 +359,23 @@ nav a:hover::after, nav a.active::after {
 }
 
 .features-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
+  margin-top: 20px;
 }
 
 .features-list li {
   display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  font-size: 1.1rem;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
   font-weight: 500;
 }
 
 .features-list i {
   color: var(--accent-color);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .about-image {
@@ -385,11 +386,13 @@ nav a:hover::after, nav a.active::after {
 }
 
 .about-image img {
+  width: 100%;
+  height: auto;
   transition: transform 0.5s ease;
 }
 
 .about-image:hover img {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 /* ==================================== */
@@ -749,6 +752,16 @@ footer {
   .quick-links h4::after, .newsletter h4::after {
     left: 50%;
     transform: translateX(-50%);
+  }
+  .about-content {
+    flex-direction: column;
+  }
+  .about-image {
+    width: 80%;
+    margin: 20px auto;
+  }
+  .features-list {
+    grid-template-columns: 1fr;
   }
 }
 
