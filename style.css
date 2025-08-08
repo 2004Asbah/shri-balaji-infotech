@@ -119,6 +119,7 @@ header .container {
 .logo {
   height: 40px; 
   width: auto;
+  text-align: center; 
 }
 
 .logo-text h1 {
@@ -853,4 +854,5 @@ footer {
     font-size: 1rem;
   }
 }
+
 
