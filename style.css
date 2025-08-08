@@ -122,14 +122,14 @@ header .container {
 }
 
 .logo-text h1 {
-  font-size: 1.4rem;
-  margin-bottom: 0;
+    font-size: 1.6rem; /* Adjust the size as needed */
+    margin-bottom: 0;
+    font-weight: 600;
+    line-height: 1.2;
 }
 
-.logo-text p {
-  font-size: 0.8rem;
-  opacity: 0.8;
-}
+/* You can remove the .logo-text p rule entirely as it's no longer used. */
+
 
 nav {
   display: flex;
@@ -853,3 +853,4 @@ footer {
     font-size: 1rem;
   }
 }
+
