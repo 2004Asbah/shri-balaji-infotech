@@ -12,19 +12,19 @@ const popupModal = document.getElementById('popup');
 const closeBtn = document.querySelector('.close-btn');
 
 enrollBtn.addEventListener('click', () => {
-    popupModal.style.display = 'flex';
+    popupModal.classList.add('active');
     document.body.style.overflow = 'hidden';
 });
 
 closeBtn.addEventListener('click', () => {
-    popupModal.style.display = 'none';
+    popupModal.classList.remove('active');
     document.body.style.overflow = 'auto';
 });
 
 // Close modal when clicking outside
 window.addEventListener('click', (e) => {
     if (e.target === popupModal) {
-        popupModal.style.display = 'none';
+        popupModal.classList.remove('active');
         document.body.style.overflow = 'auto';
     }
 });
@@ -38,7 +38,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
         const targetElement = document.querySelector(targetId);
         
         window.scrollTo({
-            top: targetElement.offsetTop - 80,
+            top: targetElement.offsetTop - 80, // Offset for the fixed header
             behavior: 'smooth'
         });
         
@@ -49,10 +49,10 @@ document.querySelectorAll('nav a').forEach(anchor => {
 
 // Active nav link on scroll
 window.addEventListener('scroll', () => {
-    const scrollPosition = window.scrollY;
+    const scrollPosition = window.scrollY + 80; // Adjusted for the fixed header height
     
     document.querySelectorAll('section').forEach(section => {
-        const sectionTop = section.offsetTop - 100;
+        const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
         const sectionId = section.getAttribute('id');
         
@@ -78,7 +78,7 @@ forms.forEach(form => {
         
         // Close popup if it's the enrollment form
         if (form.classList.contains('popup-form')) {
-            popupModal.style.display = 'none';
+            popupModal.classList.remove('active');
             document.body.style.overflow = 'auto';
         }
     });
